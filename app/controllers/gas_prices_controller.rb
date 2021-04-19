@@ -72,6 +72,7 @@ class GasPricesController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def gas_price_params
-      params.require(:gas_price).permit(:gas_price)
+      params.require(:gas_price)
+      params.permit(:gas_price)
     end
 end

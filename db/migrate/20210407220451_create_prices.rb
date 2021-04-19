@@ -1,7 +1,7 @@
 class CreatePrices < ActiveRecord::Migration[6.0]
   def change
     create_table :prices do |t|
-      t.float :price
+      t.integer :price
 
       t.timestamps
     end

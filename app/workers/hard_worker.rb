@@ -8,6 +8,8 @@ include HTTParty
 
     # save gas price to table to be used in email
     @gas = GasPrice.new(@gas_price)
+    @gas.update_attribute(:gas_price, @gas.gas_price)
+  
 
     # get all saved prices
     @prices = Price.all
@@ -17,11 +19,12 @@ include HTTParty
           SendNotificationsJob.perform_now(price.id)
           # delete the user saved price and any users dependent to it.
           Price.find(price.id).destroy
+         
   end
 }
-else
-puts' @gas'
-end 
+end
+puts @prices
    end
+   
 end
  

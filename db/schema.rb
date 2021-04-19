@@ -22,7 +22,7 @@ ActiveRecord::Schema.define(version: 2021_04_07_221517) do
   end
 
   create_table "prices", force: :cascade do |t|
-    t.float "price"
+    t.integer "price"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

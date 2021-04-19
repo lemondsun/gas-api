@@ -1,6 +1,6 @@
 class UserMailer < ApplicationMailer
-  def send_notification_mail(article)
-    
-    mail(to: Price.find(article).users.pluck(:email), subject: 'Simple Demo to showcase Active Job')
+  def send_notification_mail(price_id)
+@user_price = Price.find(price_id).price
+    mail(to: Price.find(price_id).users.pluck(:email), subject: 'Gas price alert')
 end
 end

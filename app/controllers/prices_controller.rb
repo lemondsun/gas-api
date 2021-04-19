@@ -4,12 +4,7 @@ class PricesController < ApplicationController
   # GET /prices
   def index
     @prices = Price.all
-    if @prices
-      SendNotificationsJob.perform_now(@prices)
     
-         else
-      render 'new'
-         end
     render json: @prices
   end
 
@@ -51,6 +46,7 @@ class PricesController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def price_params
-      params.require(:price).permit(:price)
+      params.require(:price)
+      params.permit(:price)
     end
 end
