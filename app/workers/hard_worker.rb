@@ -4,12 +4,20 @@ include HTTParty
   def perform()
   #  get gas price
     @response = HTTParty.get( Rails.application.credentials.api[:gas_api])
-    @gas_price = Hash['gas_price' => @response['gasPriceRange']['4'] ]
+    @gas_price = Hash['gas_price' => @response['fast']]
 
-    # save gas price to table to be used in email
-    @gas = GasPrice.new(@gas_price)
-    @gas.update_attribute(:gas_price, @gas.gas_price)
+    # keeps the number of prices saved in the database at one
+    @gas_prices = GasPrice.all
+    if @gas_prices.length != 0
+       @gas_prices[0].update_attribute(:gas_price, @gas_price['gas_price'])
+    end
   
+@gas = @gas_prices[0]
+    # save gas price to table to be used in email
+    # @gas = GasPrice.new(@gas_price)
+    # if @gas.save
+    #   puts json: @gas_price, status: :created, location: @gas_price
+    # end
 
     # get all saved prices
     @prices = Price.all
@@ -23,7 +31,7 @@ include HTTParty
   end
 }
 end
-puts @prices
+
    end
    
 end
