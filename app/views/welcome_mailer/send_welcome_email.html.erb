@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+ <head>
+<meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+ </head>
+ <body>
+ <%=image_tag attachments['logo.png'].url, style: "width: 50vw;" "margin: 0vh 0vw 0vh 25vw;" %>
+
+
+<p style='text-align:center; font-size:1.5rem;'>Thank you for using our gas price tracking web - app.</p>
+
+<div style='text-align:center; background-color: rgb(231,233,235); margin: 0vh 2.5vw 0vh 2.5vw; border-radius: 10px; padding: .5%;'>
+<p>The Ethereum Gas price is now <span style='color:orange;'>200</span> which is at or below your targeted price of <span style='color:orange;'>500</span>.
+</p>
+<p>
+Thank you once again for using our service, feel free to track a new price with us by clicking the link below.
+</p>
+</div>
+<a href='http://localhost:3001.com'>
+<%=image_tag attachments['linkButton.jpg'].url, style: "width: 50vw;" "margin: 0vh 0vw 0vh 25vw;" %>
+</a>
+ </body>
+</html>
