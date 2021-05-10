@@ -7,7 +7,7 @@ attachments.inline['logo.png'] = {
   mime_type: 'image/png'
 }
 attachments.inline['linkButton.jpg'] = {
-  data: File.read(Rails.root.join('app/assets/images/linkButton.jpg')),
+  data: File.read(Rails.root.join('app/assets/images/Untitled-34-1.png')),
   mime_type: 'image/jpg'
 }
 @url = 'localhost:3001.com'
