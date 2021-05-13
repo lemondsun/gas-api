@@ -5,3 +5,12 @@
 :queues:
   # - [low_priority, 1]
   # - [high_priority, 2] # high priority
+
+  development:
+  :concurrency: 5
+production:
+  :concurrency: 10
+:queues:
+  - high
+  - default
+  - mailers
