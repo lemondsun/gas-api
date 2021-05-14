@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :users
+  root 'welcome#index'  resources :users
   resources :gas_prices
   resources :prices
   get '/search' => 'gas_prices#search'

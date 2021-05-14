@@ -12,7 +12,7 @@ if File.exist?(schedule_file) && Sidekiq.server?
 end
 
 Sidekiq.configure_client do |config|
-  config.redis = { url: ENV.fetch("REDISTOGO_URL"), size: 1, network_timeout: 5 }
+  config.redis = { url: ENV.fetch("REDISTOGO_URL"), size: 10, network_timeout: 5 }
 end
 
 Sidekiq.configure_server do |config|
