@@ -10,7 +10,7 @@ attachments.inline['linkButton.jpg'] = {
   data: File.read(Rails.root.join('app/assets/images/Untitled-34-1.png')),
   mime_type: 'image/jpg'
 }
-@url = 'localhost:3001.com'
+
     mail(to: Price.find(price_id).users.pluck(:email), subject: 'Gas price alert')
 end
 end
