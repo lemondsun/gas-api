@@ -3,7 +3,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '3.0.1'
 gem "sidekiq-cron", "~> 1.1"
-gem 'sidekiq'
+gem 'sidekiq', '~> 5.2.8'
 gem 'excon'
 
 gem 'httparty'
