@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-  root 'welcome#index'  resources :users
+  get '/', to: proc { [200, {}, ['']] }
+  resources :users
   resources :gas_prices
   resources :prices
   get '/search' => 'gas_prices#search'
