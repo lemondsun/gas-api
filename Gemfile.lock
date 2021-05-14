@@ -232,7 +232,6 @@ DEPENDENCIES
   bootsnap (>= 1.4.2)
   byebug
   excon
-  faraday
   httparty
   listen (~> 3.2)
   pg (>= 0.18, < 2.0)
