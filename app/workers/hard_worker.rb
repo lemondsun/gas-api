@@ -19,18 +19,20 @@ include HTTParty
     end
   
 @gas = @gas_prices[0]
-  
+@priceid_delete = 0
 
     # get all saved user prices
     @prices = Price.all
     if @prices.length != 0
     @prices.each { 
       |price| if @gas['gas_price'] <= price.price
+      @priceid_delete = price.id
           SendNotificationsJob.perform_now(price.id)
           # delete the user saved price and any users dependent to it.
-          Price.find(price.id).destroy
+         
   end
 }
+Price.find(@priceid_delete).destroy
 end
    end
    
