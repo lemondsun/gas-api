@@ -28,7 +28,7 @@ include HTTParty
       |price| if @gas['gas_price'] <= price.price
           SendNotificationsJob.perform_now(price.id)
           # delete the user saved price and any users dependent to it.
-          sleep 10
+          sleep 30
           Price.find(price.id).destroy
   end
 }
