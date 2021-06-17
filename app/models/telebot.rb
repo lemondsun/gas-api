@@ -1,0 +1,2 @@
+class Telebot < ApplicationRecord
+end

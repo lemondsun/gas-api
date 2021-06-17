@@ -1,0 +1,9 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  chatId: 1
+  price: 1
+
+two:
+  chatId: 1
+  price: 1

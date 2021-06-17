@@ -4,14 +4,14 @@
 <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
  </head>
 
- <body>
- <div style='background-color: white; margin: none;'>
+ <body style='background-color: white; margin: none;'>
+ <div>
   <div>
-#  <%=image_tag attachments['logo.png'].url, style:'width: 50vw;' 'margin: 5vh 0vw 0vh 25vw;' %>
+ <%=image_tag attachments['logo.png'].url, style:'width: 50vw;' 'margin: 5vh 0vw 0vh 25vw;' %>
 </div>
- <div style='text-align:center; background-color: rgb(209, 209, 209); margin: 0vh 3.5vw 0vh 3.5vw; border-radius: 10px; padding: 3.5%; height: 80%'>
+ <div style='text-align:center; background-color: white; margin: 0vh 3.5vw 0vh 3.5vw; border-radius: 10px; padding: 3.5%; height: 80%'>
 <p style='text-align:center; font-size:2rem; font-family:Helvetica; color:black;'>Thank you for using our Ethereum gas price tracking web - app.</p>
-<div style='background-color: rgb(231,233,235); margin: 0vh 2.5vw 0vh 2.5vw; border-radius: 10px; padding: .5% .5% 0% .5%; height: 40%'>
+<div style='background-color: white; margin: 0vh 2.5vw 0vh 2.5vw; border-radius: 10px; padding: .5% .5% 0% .5%; height: 40%'>
 <p style='font-family:Helvetica; font-size:1.2rem; color:black;'>The Ethereum Gas price is now <span style='color:orange;'><%= @gas_price%></span> which is at or below your targeted price of <span style='color:orange;'><%= @user_price %></span>.
 </p>
 <p style='margin: 2.5vh 0% 0% 0%; font-family:Helvetica; font-size:1.2rem; color:black;'>
@@ -25,7 +25,7 @@ Feel free to track a new price with us by clicking the link below.
 </div>
 
 <div style='text-align:center; margin: 5vh 0%;'>
-# <p style='font-family:Helvetica;'>This service is brought to you by <a class='chainflow-link' href='https://chainflow.io/' style='text-decoration: none;'><span style='color:orange;'>Chainflow</span></a>.</p>
+<p style='font-family:Helvetica;'>This service is brought to you by <a class='chainflow-link' href='https://chainflow.io/' style='text-decoration: none;'><span style='color:orange;'>Chainflow</span></a>.</p>
  <p>The Ethereum gas price is delivered from <a href='https://docs.defipulse.com/' style='text-decoration: none;'><span style='color:orange;'>DeFi Pulse Data</span></a>.</p>
 <p style='font-family:Helvetica; color:black;'>This website is a <a href='https://www.jasonmullingspro.com/' style='text-decoration: none;' ><span style='color:orange;' >Jason Mullings</span></a> production.</p>
 </div>

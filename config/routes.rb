@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :telebots
   get '/', to: proc { [200, {}, ['']] }
   resources :users
   resources :gas_prices
