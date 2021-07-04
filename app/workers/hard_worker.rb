@@ -34,6 +34,4 @@ include HTTParty
 }
 end
    end
-   
 end
- 
